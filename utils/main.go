@@ -1,13 +1,9 @@
-package main
+package utils
 
 import (
 	"os"
 	"strings"
 )
-
-func main() {
-
-}
 
 func GetInput() []byte {
 	input, err := os.ReadFile("./input.txt")
@@ -19,6 +15,6 @@ func GetInput() []byte {
 	return input
 }
 
-func SplitInput(input []byte) []string {
+func SplitInputLines(input []byte) []string {
 	return strings.Split(string(input), "\n")
 }
